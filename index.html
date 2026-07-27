@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="Datenschutzerklärung für Chrome-Erweiterungen von JoshDebris.">
+  <meta name="description" content="Datenschutzerklärung für die Chrome-Erweiterungen von JoshDebris.">
   <title>Datenschutzerklärung | Chrome-Erweiterungen</title>
 
   <style>
@@ -173,17 +173,8 @@
       letter-spacing: -0.025em;
     }
 
-    h3 {
-      margin: 24px 0 8px;
-      font-size: 1rem;
-    }
-
     p {
       margin: 10px 0;
-    }
-
-    ul {
-      padding-left: 1.25rem;
     }
 
     .tag {
@@ -205,13 +196,6 @@
     footer {
       padding: 0 0 42px;
       font-size: 0.9rem;
-    }
-
-    code {
-      padding: 0.1em 0.35em;
-      border-radius: 6px;
-      background: var(--accent-soft);
-      color: var(--text);
     }
 
     @media (max-width: 720px) {
@@ -240,10 +224,10 @@
     <h1>Datenschutzerklärung</h1>
 
     <p class="intro">
-      Diese Seite beschreibt die Datenverarbeitung der unten aufgeführten
-      Chrome-Erweiterungen von <strong>JoshDebris aka Joschka Truemmer</strong>. Die Erweiterungen
-      arbeiten grundsätzlich lokal im Browser. Es werden keine Analyse-,
-      Tracking- oder Werbedienste verwendet.
+      Diese Seite beschreibt die Datenverarbeitung der veröffentlichten
+      Chrome-Erweiterungen von <strong>JoshDebris</strong>. Die Erweiterungen
+      arbeiten lokal im Browser. Es werden keine Analyse-, Tracking- oder
+      Werbedienste verwendet.
     </p>
 
     <div class="summary" aria-label="Zusammenfassung">
@@ -265,15 +249,12 @@
   <div class="wrap">
     <nav aria-label="Erweiterungen">
       <ul>
-        <li><a href="#mo3ok">MO3OK!</a></li>
-        <li><a href="#celowy">Celowy</a></li>
         <li><a href="#zucker">ZUCKER</a></li>
+        <li><a href="#celowy">Celowy</a></li>
         <li><a href="#streamfinder">StreamFinder</a></li>
-        <li><a href="#extension-manager">Extension Manager</a></li>
-        <li><a href="#maps-return">Maps Return</a></li>
-        <li><a href="#storescope">StoreScope</a></li>
-        <li><a href="#instagram-popup-exterminator">Instagram Popup Exterminator</a></li>
         <li><a href="#pathy">Pathy</a></li>
+        <li><a href="#extension-manager">Extension Manager</a></li>
+        <li><a href="#mo3ok">MO3OK!</a></li>
       </ul>
     </nav>
 
@@ -302,20 +283,20 @@
         </p>
       </section>
 
-      <section id="mo3ok">
-        <span class="tag">Lokale Einstellungen</span>
-        <h2>MO3OK!</h2>
+      <section id="zucker">
+        <span class="tag">Nutzerdefinierte Skripte</span>
+        <h2>ZUCKER</h2>
 
         <p>
-          MO3OK! speichert die vom Nutzer festgelegten Sonderzeichen, die
-          Anzahl der Zeichenfelder sowie optionale Funktionseinstellungen
-          lokal im Browser.
+          ZUCKER speichert vom Nutzer erstellte JavaScript- und CSS-Snippets,
+          Website-Zuordnungen sowie Einstellungen lokal im Browser.
         </p>
 
         <p>
-          Die gespeicherten Daten dienen ausschließlich der Funktion der
-          Erweiterung. Sie werden weder an den Entwickler noch an Dritte
-          übertragen.
+          Skripte und Styles werden ausschließlich auf Websites ausgeführt,
+          die der Nutzer selbst auswählt, und nur solange sie aktiviert sind.
+          ZUCKER überträgt keine Daten an den Entwickler, externe Server oder
+          Dritte.
         </p>
       </section>
 
@@ -336,23 +317,6 @@
         </p>
       </section>
 
-      <section id="zucker">
-        <span class="tag">Nutzerdefinierte Skripte</span>
-        <h2>ZUCKER</h2>
-
-        <p>
-          ZUCKER speichert vom Nutzer erstellte JavaScript- und CSS-Snippets,
-          Website-Zuordnungen sowie Einstellungen lokal im Browser.
-        </p>
-
-        <p>
-          Skripte und Styles werden ausschließlich auf Websites ausgeführt,
-          die der Nutzer selbst auswählt, und nur solange sie aktiviert sind.
-          ZUCKER überträgt keine Daten an den Entwickler, externe Server oder
-          Dritte.
-        </p>
-      </section>
-
       <section id="streamfinder">
         <span class="tag">Lokale Stream-Erkennung</span>
         <h2>StreamFinder</h2>
@@ -367,6 +331,22 @@
           Erkannte Stream-Adressen und Einstellungen werden ausschließlich
           lokal verarbeitet beziehungsweise gespeichert. Es erfolgt keine
           Übertragung an den Entwickler oder an externe Server.
+        </p>
+      </section>
+
+      <section id="pathy">
+        <span class="tag">Chrome DevTools</span>
+        <h2>Pathy</h2>
+
+        <p>
+          Pathy verarbeitet den aktuell in Chrome DevTools ausgewählten
+          DOM-Knoten lokal, um CSS-Selektoren, XPath-Ausdrücke und weitere
+          Locator-Formate zu erzeugen.
+        </p>
+
+        <p>
+          Lokale UI-Einstellungen werden im Browser gespeichert. Pathy sendet
+          keine Daten an den Entwickler, externe Server oder Dritte.
         </p>
       </section>
 
@@ -388,68 +368,20 @@
         </p>
       </section>
 
-      <section id="maps-return">
-        <span class="tag">Lokale Seitenanpassung</span>
-        <h2>Maps Return</h2>
+      <section id="mo3ok">
+        <span class="tag">Lokale Einstellungen</span>
+        <h2>MO3OK!</h2>
 
         <p>
-          Maps Return verändert die Darstellung unterstützter Google-Seiten
-          lokal im Browser, um einen direkten Zugriff auf Google Maps
-          bereitzustellen.
+          MO3OK! speichert die vom Nutzer festgelegten Sonderzeichen, die
+          Anzahl der Zeichenfelder sowie optionale Funktionseinstellungen
+          lokal im Browser.
         </p>
 
         <p>
-          Die Erweiterung verwendet keine Analyse- oder Trackingdienste und
-          überträgt keine besuchten URLs, Suchbegriffe oder sonstigen Daten an
-          den Entwickler oder an Dritte.
-        </p>
-      </section>
-
-      <section id="storescope">
-        <span class="tag">Lokale Store-Auswertung</span>
-        <h2>StoreScope</h2>
-
-        <p>
-          StoreScope verarbeitet öffentlich sichtbare Informationen aus dem
-          Chrome Web Store lokal im Browser, um zusätzliche Statistiken und
-          Details zur aktuell angezeigten Erweiterung darzustellen.
-        </p>
-
-        <p>
-          Die ausgelesenen Informationen und lokalen Einstellungen werden
-          nicht an den Entwickler, externe Server oder Dritte übertragen.
-        </p>
-      </section>
-
-      <section id="instagram-popup-exterminator">
-        <span class="tag">Lokale Seitenanpassung</span>
-        <h2>Instagram Popup Exterminator</h2>
-
-        <p>
-          Instagram Popup Exterminator erkennt und entfernt störende
-          Instagram-Dialoge und Overlays lokal im Browser.
-        </p>
-
-        <p>
-          Es werden keine Instagram-Kontodaten, Seiteninhalte,
-          Nutzeraktivitäten oder sonstigen Informationen an den Entwickler
-          oder an Dritte übertragen.
-        </p>
-      </section>
-
-      <section id="pathy">
-        <span class="tag">Chrome DevTools</span>
-        <h2>Pathy</h2>
-
-        <p>
-          Pathy verarbeitet den aktuell in Chrome DevTools ausgewählten
-          DOM-Knoten lokal, um CSS-Selektoren, XPath-Ausdrücke und weitere
-          Locator-Formate zu erzeugen.
-        </p>
-
-        <p>
-          Lokale UI-Einstellungen werden im Browser gespeichert. Pathy sendet
-          keine Daten an den Entwickler, externe Server oder Dritte.
+          Die gespeicherten Daten dienen ausschließlich der Funktion der
+          Erweiterung. Sie werden weder an den Entwickler noch an Dritte
+          übertragen.
         </p>
       </section>
 
