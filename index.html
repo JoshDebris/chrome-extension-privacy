@@ -1,4 +1,315 @@
 <!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Datenschutzerklärung für die Chrome-Erweiterungen von JoshDebris.">
+  <title>Datenschutzerklärung | Chrome-Erweiterungen</title>
+
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --text: #1c1d22;
+      --muted: #646873;
+      --line: #dfe2e8;
+      --accent: #7b3ff2;
+      --accent-soft: #efe8ff;
+      --shadow: 0 14px 40px rgba(27, 31, 45, 0.08);
+      --radius: 18px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111216;
+        --surface: #1a1c22;
+        --text: #f2f3f5;
+        --muted: #a8acb7;
+        --line: #30333c;
+        --accent: #b28cff;
+        --accent-soft: #2b2140;
+        --shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 34px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.2rem, 7vw, 4.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 30px 0 0;
+    }
+
+    .summary div {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.96rem;
+    }
+
+    .summary span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 12px;
+      z-index: 2;
+      margin: 12px 0 34px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 8px 11px;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    main {
+      padding-bottom: 72px;
+    }
+
+    section {
+      scroll-margin-top: 100px;
+      margin: 0 0 22px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.45rem, 4vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .muted,
+    footer {
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 0 0 42px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        padding-top: 46px;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 22px;
+      }
+
+      nav {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="wrap">
+    <p class="eyebrow">Chrome Extensions · Privacy</p>
+    <h1>Datenschutzerklärung</h1>
+
+    <p class="intro">
+      Diese Seite beschreibt die Datenverarbeitung der veröffentlichten
+      Chrome-Erweiterungen von <strong>Joschka Truemmer aka JoshDebris</strong>. Die Erweiterungen
+      arbeiten lokal im Browser. Es werden keine Analyse-, Tracking- oder
+      Werbedienste verwendet.
+    </p>
+
+    <div class="summary" aria-label="Zusammenfassung">
+      <div>
+        <strong>Keine Übertragung</strong>
+        <span>Keine Daten an den Entwickler oder externe Server.</span>
+      </div>
+      <div>
+        <strong>Keine Werbung</strong>
+        <span>Keine Werbenetzwerke, Profile oder Vermarktung.</span>
+      </div>
+      <div>
+        <strong>Lokale Kontrolle</strong>
+        <span>Einstellungen und Inhalte bleiben im Browserprofil.</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav aria-label="Erweiterungen">
+      <ul>
+        <li><a href="#zucker">ZUCKER</a></li>
+        <li><a href="#celowy">Celowy</a></li>
+        <li><a href="#streamfinder">StreamFinder</a></li>
+        <li><a href="#pathy">Pathy</a></li>
+        <li><a href="#extension-manager">Extension Manager</a></li>
+        <li><a href="#mo3ok">MO3OK!</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="general">
+        <span class="tag">Allgemeine Angaben</span>
+        <h2>Grundsätze der Datenverarbeitung</h2>
+
+        <p>
+          Die Erweiterungen erfassen keine personenbezogenen Daten für den
+          Entwickler und übertragen keine Nutzerdaten an externe Server oder
+          Dritte. Es werden keine Analyse-, Tracking-, Werbe- oder
+          Profiling-Dienste eingesetzt.
+        </p>
+
+        <p>
+          Soweit eine Erweiterung Einstellungen, vom Nutzer angelegte Inhalte
+          oder technisch erforderliche Zustände speichert, erfolgt dies
+          ausschließlich lokal über die Speicherfunktionen des Browsers.
+        </p>
+
+        <p>
+          Lokal gespeicherte Daten können je nach Erweiterung innerhalb der
+          Erweiterung gelöscht, zurückgesetzt oder durch Entfernen der
+          Erweiterung aus dem Browser gelöscht werden.
+        </p>
+      </section>
+
+      <section id="zucker">
+        <span class="tag">Nutzerdefinierte Skripte</span>
+        <h2>ZUCKER</h2>
+
+        <p>
+          ZUCKER speichert vom Nutzer erstellte JavaScript- und CSS-Snippets,
+          Website-Zuordnungen sowie Einstellungen lokal im Browser.
+        </p>
+
+        <p>
+          Skripte und Styles werden ausschließlich auf Websites ausgeführt,
+          die der Nutzer selbst auswählt, und nur solange sie aktiviert sind.
+          ZUCKER überträgt keine Daten an den Entwickler, externe Server oder
+          Dritte.
+        </p>
+      </section>
+
+      <section id="celowy">
+        <span class="tag">Lokale Snippets</span>
+        <h2>Celowy</h2>
+
+        <p>
+          Celowy speichert vom Nutzer angelegte Text- und Code-Snippets,
+          Titel, Tags, Einstellungen sowie gegebenenfalls Importdaten lokal
+          im Browser.
+        </p>
+
         <p>
           Markierter Text wird nur nach einer ausdrücklichen Nutzeraktion über
           das Kontextmenü als Snippet übernommen. Es werden keine Daten an den
@@ -50,7 +361,7 @@
         </p>
 
         <p>
-          Einstellungen wie Favoriten, Sortierung und
+          Einstellungen wie Favoriten, Gruppen, Sortierung und
           Darstellungsoptionen werden lokal gespeichert. Informationen über
           installierte Erweiterungen werden nicht an den Entwickler oder an
           Dritte übertragen.
@@ -74,6 +385,25 @@
         </p>
       </section>
 
-      <section id="justnotes">
-    <span class="tag">Lokale Notizen &amp; Lesezeichen</span>
-    <h2>JustNotes</h2>
+      <section id="contact">
+        <span class="tag">Kontakt</span>
+        <h2>Verantwortlicher Entwickler</h2>
+
+        <p>
+          <strong>Joschka Truemmer</strong><br>
+          GitHub: <a href="https://github.com/JoshDebris">JoshDebris</a>
+        </p>
+
+        <p class="muted">
+          Stand: 27. Juli 2026
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Diese Datenschutzerklärung gilt ausschließlich für die auf dieser Seite
+      genannten Chrome-Erweiterungen.
+    </footer>
+  </div>
+</body>
+</html>
